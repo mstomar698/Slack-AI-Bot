@@ -8,10 +8,13 @@ import (
 func Hello() {
 	bot.BotInit()
 
-	bot.Bot.Command("hello", &slacker.CommandDefinition{
-		Description: "Say hello",
+	bot.Bot.Command("hello - <user>", &slacker.CommandDefinition{
+		Description: "Say hello to someone",
+		// Example:	 "hello - user",
 		Handler: func(botCtx slacker.BotContext, request slacker.Request, response slacker.ResponseWriter) {
-			response.Reply("hello new user!")
+			query := request.Param("user")
+			res := "Welcome to dev-lok" + "\n 👋 Hello From  " + query + "  and others"
+			response.Reply(res)
 		},
 	})
 

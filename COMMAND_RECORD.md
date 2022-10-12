@@ -1,25 +1,32 @@
-go get "github.com/shomali11/slacker"
-go get github.com/spf13/viper
-
+#### Packages used 
+- `go get github.com/shomali11/slacker`
+- `go get github.com/krognol/go-wolfram`
+- `go get github.com/joho/dotenv`
+- `go get github.com/tidwall/gjson`
+- `go get github.com/wit-ai/wit-go/v2`
 #### Import Notes:
+
+##### getting .env using godotenv
+
+##### getting .env using viper
 
 - viper commands follow pattern as
 
 * to initialize viper
 
-- go get github.com/spf13/viper
+- `go get github.com/spf13/viper`
 
 * to set config path and file
 
-- viper.SetConfigName(".env")
+- `viper.SetConfigName(".env")`
 
 * to read config file
 
-- viper.ReadInConfig()
+- `viper.ReadInConfig()`
 
 * to get value from config file
 
-- viper.Get(key)
+- `viper.Get(key)`
 
 #### Notes on Viper-Config
 
@@ -35,9 +42,20 @@ go get github.com/spf13/viper
 
 * to check env working run
 
-- fmt.Println("SLACK_BOT_TOKEN : ", os.Getenv("SLACK_BOT_TOKEN"))
-- fmt.Println("SOCKET_TOKEN : ", os.Getenv("SOCKET_TOKEN"))
+- `fmt.Println("SLACK_BOT_TOKEN : ", os.Getenv("SLACK_BOT_TOKEN"))`
+- `fmt.Println("SOCKET_TOKEN : ", os.Getenv("SOCKET_TOKEN"))`
 
 * importance of defer
 
 - makes sure to call cancel() at all cost
+
+#### Techs used
+
+- WIT
+
+* Developed by facebook
+* could be trained
+
+- Wolfram
+
+* Ans recongnised question by WIT
