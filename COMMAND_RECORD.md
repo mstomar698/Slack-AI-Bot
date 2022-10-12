@@ -7,6 +7,9 @@
 #### Import Notes:
 
 ##### getting .env using godotenv
+- `go get github.com/joho/dotenv`
+* then use 
+- `godotenv.Load(".env")`
 
 ##### getting .env using viper
 
